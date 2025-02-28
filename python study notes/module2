@@ -1,0 +1,307 @@
+Here are the key study notes about the Python `print()` function:
+
+# Python `print()` Function Study Notes
+
+## Basic Concepts
+- `print()` is a built-in function that outputs messages to the screen/console
+- Built-in functions are always available without importing
+- Python 3.8 has 69 built-in functions listed in the Python Standard Library
+
+## Function Calls
+- Function invocation (calling) requires the function name followed by parentheses
+- An empty `print()` outputs an empty line
+- Arguments go inside the parentheses, separated by commas
+  - Example: `print("Hello,", "world!")`
+
+## Strings
+- Can be enclosed in double quotes: `"I am a string"`
+- Or single quotes: `'I am a string, too'`
+
+## Special Characters
+- Backslash (`\`) is a special character that modifies the meaning of the next character
+- `\n` is the newline character that starts a new output line
+
+## Argument Types
+1. **Positional Arguments**
+   - Order determines their meaning
+   - First argument outputs first, second outputs second, etc.
+
+2. **Keyword Arguments**
+   - Identified by specific keywords, not by position
+   - Used for special formatting options
+
+## Formatting Parameters
+- `sep` parameter: Specifies the separator between outputted arguments
+  - Example: `print("H", "E", "L", "L", "O", sep="-")` outputs "H-E-L-L-O"
+- `end` parameter: Specifies what to print at the end of the statement
+  - Default is newline (`\n`)
+  - Can be changed: `print("Hello", end="!")` outputs "Hello!"
+
+## Programming Concepts
+- Computer programs are collections of instructions
+- Instructions are commands that perform specific tasks when executed
+
+# Python Literals and Data Types Study Notes
+
+## Literals
+- **Definition**: Notations representing fixed values in code
+- **Types**:
+  - Numeric literals (e.g., `123`)
+  - String literals (e.g., `"I am a literal."`)
+
+## Number Systems
+1. **Binary System**
+   - Base 2 number system
+   - Uses only 0s and 1s
+   - Example: `1010` binary = `10` decimal
+
+2. **Octal System**
+   - Base 8 number system
+
+3. **Hexadecimal System**
+   - Base 16 number system
+   - Uses decimal digits (0-9) plus six extra letters (A-F)
+
+## Numeric Data Types
+
+1. **Integers (int)**
+   - Numbers without fractional components
+   - Examples: `256`, `-1`
+   - Can be positive or negative
+
+2. **Floating-Point Numbers (float)**
+   - Numbers that contain or can contain fractional components
+   - Example: `1.27`
+
+## String Handling
+- **String Encoding Special Characters**:
+  - Using escape character: `'I\'m happy.'`
+  - Using alternative quotes: `"I'm happy."` (to include apostrophes)
+  - Alternative example: `'He said "Python", not "typhoon"'` (to include quotes)
+
+## Boolean Values
+- Two constant objects: `True` and `False`
+- Represent truth values
+- In numeric contexts: `True` is `1`, `False` is `0`
+
+## Special Literal
+- **None Literal**:
+  - A `NoneType` object
+  - Represents the absence of a value
+  
+# Python Operators and Expressions Study Notes
+
+## Expressions
+- **Definition**: Combinations of values, variables, operators, or function calls that evaluate to a value
+- **Example**: `1 + 2` evaluates to `3`
+
+## Operators
+- **Definition**: Special symbols or keywords that perform operations on values
+- **Example**: `*` multiplies two values (`x * y`)
+
+## Types of Arithmetic Operators
+1. **Addition** (`+`): Adds two operands
+2. **Subtraction** (`-`): Subtracts right operand from left operand
+3. **Multiplication** (`*`): Multiplies two operands
+4. **Division** (`/`): Divides left operand by right operand, always returns a float
+5. **Modulus** (`%`): Returns remainder after division
+   - Example: `5 % 2 = 1`
+6. **Exponentiation** (`**`): Raises left operand to power of right operand
+   - Example: `2 ** 3 = 8` (2 * 2 * 2)
+7. **Floor/Integer Division** (`//`): Division rounded down to nearest whole number
+   - Example: `3 // 2.0 = 1.0`
+
+## Operator Classification by Number of Operands
+1. **Unary Operators**: Operate on one operand
+   - Examples: `-1`, `+3`
+2. **Binary Operators**: Operate on two operands
+   - Examples: `4 + 5`, `12 % 5`
+
+## Operator Precedence (Hierarchy of Priorities)
+From highest to lowest priority:
+1. Expressions in **parentheses** `()`
+2. **Exponentiation** `**`
+3. **Unary** `+` and `-`
+4. **Multiplication** `*`, **Division** `/`, and **Modulus** `%`
+5. **Binary Addition** `+` and **Subtraction** `-`
+
+## Important Rules
+- Parentheses always have highest priority
+  - Example: `15 - 1 * (5 * (1 + 2)) = 0`
+- Exponentiation uses right-sided binding
+  - Example: `2 ** 2 ** 3 = 2 ** 8 = 256`
+- Unary operators to the right of exponentiation bind more strongly
+  - Example: `4 ** -1 = 0.25`
+  
+# Python Variables Study Notes
+
+## Variables Basics
+- **Definition**: Named memory locations that store values
+- Created automatically when you first assign a value
+- No declaration needed (unlike some other languages)
+
+## Variable Identifiers (Names)
+- Must be a unique, non-empty sequence of characters
+- Must start with an underscore (`_`) or a letter
+- After first character, can include underscores, letters, and digits
+- Cannot be a Python keyword
+- Case-sensitive (e.g., `counter` and `Counter` are different variables)
+
+## Python as a Dynamically-Typed Language
+- No need to declare variable types
+- Same variable can hold different types during program execution
+
+## Variable Assignment
+- Basic assignment uses equal (`=`) sign
+  - Example: `var = 1`
+- Values can be reassigned at any time
+  ```python
+  var = 2
+  print(var)  # Outputs: 2
+  
+  var = 3
+  print(var)  # Outputs: 3
+  ```
+
+## Compound Assignment Operators
+- Shortcuts for modifying existing variables
+- Common compound operators:
+  - `+=` (addition)
+  - `-=` (subtraction)
+  - `*=` (multiplication)
+  - `/=` (division)
+  - `%=` (modulus)
+  - `**=` (exponentiation)
+  - `//=` (floor division)
+- Example:
+  ```python
+  var = 3
+  var += 1  # Equivalent to var = var + 1
+  print(var)  # Outputs: 4
+  ```
+
+## Combining Text and Variables
+- Use `+` operator to concatenate strings with variables
+- Example:
+  ```python
+  var = "007"
+  print("Agent " + var)  # Outputs: Agent 007
+  ```
+  
+# Python Comments Study Notes
+
+## Basic Comment Syntax
+- Comments start with the hash symbol (`#`)
+- Everything after `#` on that line is ignored by the interpreter
+- Comments are for human readers, not for the computer
+
+## Purpose of Comments
+- Leave explanatory information in code
+- Document what code does and why
+- Make programs easier to understand
+- Help both yourself and others read your code later
+
+## Single-Line Comments
+- Place `#` at the beginning or anywhere in a line
+- Example: `print("Hello!")  # Invoking the print() function`
+
+## Multi-Line Comments
+- Python doesn't have a special multi-line comment syntax
+- Place `#` at the beginning of each line you want to comment
+- Example:
+  ```python
+  # This program prints
+  # an introduction to the screen.
+  print("Hello!")
+  ```
+
+## Using Comments to Disable Code
+- Place `#` before lines of code you want to temporarily disable
+- Example: `# print("I'm Python.")`
+- Useful for testing and debugging
+
+## Best Practices
+- Use self-commenting variable names when possible
+  - Good: `length`, `width`
+  - Poor: `myvar1`, `myvar2`
+- Don't write comments with incorrect or misleading information
+- Don't use confusing variable names
+- Comments should explain "why" rather than just "what" (code already shows what)
+- Use comments when code might be confusing or non-obvious
+
+# Python Input and Print Functions - Study Notes
+
+## 1. Basic Functions
+
+- **print()**: Outputs data to the console
+- **input()**: Collects data from the console (user input)
+
+## 2. Using the input() Function
+
+### Basic Syntax
+```python
+input()  # Basic usage
+input("Prompt message: ")  # With optional prompt string
+```
+
+### Key Behaviors
+- Program execution **pauses** until the user enters data and presses Enter
+- Always returns a **string** value regardless of what is typed
+- Can include an optional prompt message as a parameter
+
+### Example
+```python
+name = input("Enter your name: ")
+print("Hello, " + name + ". Nice to meet you!")
+```
+
+## 3. String Operations with input()
+
+### String Concatenation
+```python
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+full_name = first_name + " " + last_name  # Concatenation with +
+```
+
+### Important Note
+When getting numbers through input():
+```python
+num_1 = input("Enter first number: ")  # Enter 12
+num_2 = input("Enter second number: ")  # Enter 21
+print(num_1 + num_2)  # Outputs "1221" (string concatenation)
+```
+
+### String Replication
+```python
+text = input("Enter a word: ")  # Example: "hello"
+print(text * 3)  # Outputs: "hellohellohello"
+```
+
+## 4. Type Conversion for Numeric Operations
+
+To perform mathematical operations on input values:
+```python
+num_1 = int(input("Enter first number: "))  # Enter 12
+num_2 = int(input("Enter second number: "))  # Enter 21
+print(num_1 + num_2)  # Outputs 33 (numeric addition)
+```
+
+Convert to specific types using:
+- `int()` - for integers
+- `float()` - for decimal numbers
+
+## 5. Practical Applications
+
+### Program Pause/End
+Use input() without variables to create a pause:
+```python
+# Your program code here
+print("\nPress Enter to end the program.")
+input()  # Program waits for user to press Enter
+print("THE END.")
+```
+
+### Running in Different Environments
+- In some environments (like Edube), program execution may time out if input is not provided
+- In local environments (like IDLE), the program will wait indefinitely for input
